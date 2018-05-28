@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="655d46cc-24d4-4915-a37b-826751aacb06">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="206"/>
+	<property name="ireport.y" value="43"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="accountNo" class="java.lang.String">
+		<fieldDescription><![CDATA[accountNo]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[address]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.lang.String">
+		<fieldDescription><![CDATA[amount]]></fieldDescription>
+	</field>
+	<field name="invoiceNo" class="java.lang.String">
+		<fieldDescription><![CDATA[invoiceNo]]></fieldDescription>
+	</field>
+	<field name="mobile" class="java.lang.String">
+		<fieldDescription><![CDATA[mobile]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[name]]></fieldDescription>
+	</field>
+	<field name="noOfTvs" class="java.lang.String">
+		<fieldDescription><![CDATA[noOfTvs]]></fieldDescription>
+	</field>
+	<field name="month" class="java.lang.String"/>
+	<pageHeader>
+		<band height="170">
+			<rectangle>
+				<reportElement mode="Transparent" x="153" y="0" width="255" height="170" uuid="cba43fff-f0f8-4774-8550-173f62f700d9"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="154" y="0" width="184" height="20" uuid="80f7e2a4-5215-4fea-8324-50bf96fb8658"/>
+				<textElement>
+					<font size="15" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[SRI SAI CABLE VISION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="159" width="252" height="10" uuid="3590b243-b770-4cc9-869e-ae442d473f56"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[17, Ranjit Complex, Nr Satluj Hotel, Naroda Rd, Patia, A’bad. M. 98988 24985]]></text>
+			</staticText>
+			<image>
+				<reportElement x="338" y="2" width="67" height="46" uuid="5dc3dcd2-bc5b-4b36-bf03-ce883109466c"/>
+				<imageExpression><![CDATA["D:\\gtpl logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="154" y="21" width="254" height="12" uuid="e642a805-ca3d-4988-a76d-bcb35eafd0a6"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Receipt]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="34" width="46" height="14" uuid="04e48302-0ac7-4fc0-a503-c8adc2c9188c"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ Rec. No. ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="34" width="81" height="14" uuid="460046c8-0a4c-46e1-96f6-4f889657998c"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement markup="none">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoiceNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="281" y="34" width="34" height="14" uuid="2519c7ae-4c10-42c1-b884-9a512795c829"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="315" y="34" width="93" height="14" uuid="9a9fbc40-2ea8-484c-9cf0-f40a6b0dbf56"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement markup="none">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["    -"+$F{month}+"-2018"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="153" y="48" width="47" height="14" uuid="9b0c9e7b-5a66-4ff9-b87a-47341545ef62"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ A/C No. :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="48" width="81" height="14" uuid="b273c50f-0665-433d-84d8-6b108a917626"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement markup="none">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{accountNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="153" y="62" width="47" height="14" uuid="8a22efd1-9b35-4fca-9dae-f17311a124a0"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ Name :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="62" width="208" height="14" uuid="68b5d1ab-353d-40f9-a816-d4696a4d82b3"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement markup="none">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="153" y="76" width="47" height="14" uuid="cffd8d82-497d-4501-8469-33473c2e5774"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ Address :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="76" width="208" height="14" uuid="2877863d-74eb-4b8c-9488-db900b269e66"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement markup="none">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="154" y="125" width="195" height="15" uuid="f4f2e6ca-d2a9-4286-a5a6-ad69dfeea037"/>
+				<textElement>
+					<font fontName="Shruti" size="8"/>
+				</textElement>
+				<text><![CDATA[૧. મહીના ની ૧૦મી તારીખ સુધી પૈસા ભરવાના રહેશે.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="140" width="195" height="15" uuid="f4f2e6ca-d2a9-4286-a5a6-ad69dfeea037"/>
+				<textElement>
+					<font fontName="Shruti" size="8"/>
+				</textElement>
+				<text><![CDATA[૨. કમ્પ્લેંટ નોંધાવવાનો સમય સવારે ૧૦ થી સાંજે ૫ સુધી]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="153" y="90" width="97" height="35" uuid="7c2923ca-6ea7-44cb-881d-1fb8ead0ddb6"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="20" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Rs." + $F{amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="310" y="112" width="98" height="13" uuid="ede6e7cb-7305-4a5c-b3ea-b930a07c0079"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Authorised Signatory   ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="48" width="34" height="14" uuid="cf93719c-6e4e-41fd-9f69-657268a37ddf"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ Mob :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="315" y="48" width="93" height="14" uuid="e077361a-c027-4fda-9c44-b6fd3326c04f"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement markup="none">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mobile}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="107" width="60" height="18" uuid="ee9e694f-b1f4-479e-a3d4-a135dcb7dd5f"/>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{noOfTvs}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="250" y="90" width="60" height="17" uuid="9fc28eb5-b541-4780-88bf-496908804340"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[No of TV]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="134" y="8" width="12" height="31" uuid="33de49f6-3dda-4ef7-bc59-84c186d18fc4"/>
+				<textElement rotation="Left" markup="none">
+					<font size="6" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoiceNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="67" width="12" height="31" uuid="4e897e04-9780-4824-94f2-c8fc11aee65b"/>
+				<textElement rotation="Left" markup="none">
+					<font size="6" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoiceNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="129" width="12" height="31" uuid="e565981d-0685-41c1-a79c-cae8bf4e8db7"/>
+				<textElement rotation="Left" markup="none">
+					<font size="6" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoiceNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="630"/>
+	</detail>
+</jasperReport>

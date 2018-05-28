@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.username"></property>
+		<property name="hibernate.connection.password"></property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/</property>
+		<property name="show_sql">true</property>
+		<!--<property name="hibernate.current_session_context_class">thread</property>-->
+		<!--                <property name="hibernate.cache.use_query_cache">true</property>
+		<property name="hibernate.cache.region_prefix">hibernate.test</property>
+		<property name="hibernate.jdbc.use_streams_for_binary">true</property>
+		<property name="hibernate.jdbc.batch_size">0</property>
+		<property name="hibernate.max_fetch_depth">3</property>
+		<property name="hibernate.hbm2ddl.auto">create-drop</property>
+		<property name="hibernate.generate_statistics">true</property>
+		<property name="test-assertable-setting">value</property>
+		<property name="hibernate.cache.region.factory_class">org.hibernate.testing.cache.CachingRegionFactory</property>-->
+		<!--<class-cache class="org.hibernate.jpa.test.Item" usage="read-write"/>-->
+		<!--<collection-cache collection="org.hibernate.jpa.test.Item.distributors" usage="read-write" region="RegionName"/>-->
+		<!--<event type="pre-insert"/>-->
+		<property name="hibernate.cache.use_second_level_cache">false</property>
+		<property name="hibernate.cache.use_query_cache">false</property>
+		<mapping class="com.emsays.path.dto.app.CompanyDTO"/>
+		<mapping class="com.emsays.path.dto.app.LoginDTO"/>
+		<mapping class="com.emsays.path.dto.app.YearDTO"/>
+		<mapping class="com.emsays.path.dto.app.AppInfoDTO"/>
+		<mapping class="com.emsays.path.dto.app.UpdateLogDTO"/>
+	</session-factory>
+</hibernate-configuration>
